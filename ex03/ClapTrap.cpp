@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 02:56:57 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/06 02:15:07 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/06 02:27:33 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-: ClapTrap("noname")
+: m_name("Clappy"), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
@@ -80,7 +80,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	const unsigned int oldHP = m_hitPoints;
-	if (((uint64_t)m_hitPoints + (uint64_t)amount) > UINT_MAX)
+	if (((unsigned long long)m_hitPoints + (unsigned long long)amount) > UINT_MAX)
 		m_hitPoints = UINT_MAX;
 	else
 		m_hitPoints += amount;

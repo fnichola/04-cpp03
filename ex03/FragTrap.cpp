@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:55:15 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/06 02:16:36 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/06 02:36:09 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap()
-	: FragTrap("Fraggy")
+	: ClapTrap("Fraggy")
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
+	m_hitPoints = 100;
+	m_energyPoints = 100;
+	m_attackDamage = 30;
 }
 
 FragTrap::FragTrap(const std::string& name)
