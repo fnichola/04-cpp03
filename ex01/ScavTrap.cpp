@@ -6,17 +6,18 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:55:15 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 05:41:44 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:17:23 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "debugPrint.hpp"
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(const std::string& name)
 	: ClapTrap(name)
 {
-	std::cout << "ScavTrap constructor called" << std::endl;
+	debugPrint("ScavTrap constructor called", BLU);
 	m_hitPoints = 100;
 	m_energyPoints = 50;
 	m_attackDamage = 20;
@@ -25,18 +26,18 @@ ScavTrap::ScavTrap(const std::string& name)
 ScavTrap::ScavTrap(const ScavTrap& src)
 	: ClapTrap(src)
 {
-	std::cout << "ScavTrap copy constructor called" << std::endl;
+	debugPrint("ScavTrap copy constructor called", BLU);
 	*this = src;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap destructor called" << std::endl;
+	debugPrint("ScavTrap destructor called", BLU);
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& rhs)
 {
-	std::cout << "ScavTrap copy assignment operator called" << std::endl;
+	debugPrint("ScavTrap copy assignment operator called", BLU);
 	m_name = rhs.m_name;
 	m_hitPoints = rhs.m_hitPoints;
 	m_energyPoints = rhs.m_energyPoints;

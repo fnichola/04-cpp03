@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 05:31:43 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:30:34 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 class DiamondTrap : public ScavTrap, public FragTrap
 {
 public:
+	DiamondTrap();
 	DiamondTrap(const std::string& name);
 	DiamondTrap(const DiamondTrap& src);
 	~DiamondTrap();

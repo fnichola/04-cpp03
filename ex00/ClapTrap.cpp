@@ -6,34 +6,35 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 02:56:57 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/06 02:40:30 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 01:55:02 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <limits.h>
+#include "debugPrint.hpp"
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string& name)
 : m_name(name), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	debugPrint("ClapTrap name constructor called", BLU);
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	debugPrint("ClapTrap copy constructor called", BLU);
 	*this = src;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	debugPrint("ClapTrap destructor called", BLU);
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	debugPrint("ClapTrap copy assignment operator called", BLU);
 	m_name = rhs.m_name;
 	m_hitPoints = rhs.m_hitPoints;
 	m_energyPoints = rhs.m_energyPoints;

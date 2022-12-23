@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 05:31:43 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:26:13 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class ScavTrap : public ClapTrap
 {
 public:
+	ScavTrap();
 	ScavTrap(const std::string& name);
 	ScavTrap(const ScavTrap& src);
 	~ScavTrap();

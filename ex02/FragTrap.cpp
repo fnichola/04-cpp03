@@ -6,17 +6,18 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:55:15 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/05 01:17:12 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:25:44 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "debugPrint.hpp"
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(const std::string& name)
 	: ClapTrap(name)
 {
-	std::cout << "FragTrap constructor called" << std::endl;
+	debugPrint("FragTrap constructor called", BLU);
 	m_hitPoints = 100;
 	m_energyPoints = 100;
 	m_attackDamage = 30;
@@ -25,18 +26,18 @@ FragTrap::FragTrap(const std::string& name)
 FragTrap::FragTrap(const FragTrap& src)
 	: ClapTrap(src)
 {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+	debugPrint("FragTrap copy constructor called", BLU);
 	*this = src;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap destructor called" << std::endl;
+	debugPrint("FragTrap destructor called", BLU);
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& rhs)
 {
-	std::cout << "FragTrap copy assignment operator called" << std::endl;
+	debugPrint("FragTrap copy assignment operator called", BLU);
 	m_name = rhs.m_name;
 	m_hitPoints = rhs.m_hitPoints;
 	m_energyPoints = rhs.m_energyPoints;

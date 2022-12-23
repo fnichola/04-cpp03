@@ -6,40 +6,41 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 02:56:57 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/06 02:27:33 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:43:37 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <limits.h>
+#include "debugPrint.hpp"
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
 : m_name("Clappy"), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0)
 {
-	std::cout << "ClapTrap default constructor called" << std::endl;
+	debugPrint("ClapTrap default constructor called", BLU);
 }
 
 ClapTrap::ClapTrap(const std::string& name)
 : m_name(name), m_hitPoints(10), m_energyPoints(10), m_attackDamage(0)
 {
-	std::cout << "ClapTrap constructor called" << std::endl;
+	debugPrint("ClapTrap constructor called", BLU);
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
-	std::cout << "ClapTrap copy constructor called" << std::endl;
+	debugPrint("ClapTrap copy constructor called", BLU);
 	*this = src;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap destructor called" << std::endl;
+	debugPrint("ClapTrap destructor called", BLU);
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
 {
-	std::cout << "ClapTrap copy assignment operator called" << std::endl;
+	debugPrint("ClapTrap copy assignment operator called", BLU);
 	m_name = rhs.m_name;
 	m_hitPoints = rhs.m_hitPoints;
 	m_energyPoints = rhs.m_energyPoints;
@@ -90,10 +91,10 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 void ClapTrap::printStats()
 {
-	std::cout << "------------------------------------------" << std::endl;
-	std::cout << "name: " << m_name << std::endl;
-	std::cout << "hp: " << m_hitPoints << std::endl;
-	std::cout << "energy: " << m_energyPoints << std::endl;
-	std::cout << "attack: " << m_attackDamage << std::endl;
+	std::cout << "------------------------------------------\n";
+	std::cout << "name: " << m_name << "\n";
+	std::cout << "hp: " << m_hitPoints << "\n";
+	std::cout << "energy: " << m_energyPoints << "\n";
+	std::cout << "attack: " << m_attackDamage << "\n";
 	std::cout << "------------------------------------------" << std::endl;
 }

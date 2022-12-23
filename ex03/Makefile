@@ -6,7 +6,7 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/12/06 02:25:05 by fnichola         ###   ########.fr        #
+#    Updated: 2022/12/23 02:38:51 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS = main.cpp \
 	ClapTrap.cpp \
 	ScavTrap.cpp \
 	FragTrap.cpp \
-	DiamondTrap.cpp
+	DiamondTrap.cpp \
+	debugPrint.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)

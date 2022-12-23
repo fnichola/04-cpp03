@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/05 01:13:30 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:25:56 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class FragTrap : public ClapTrap
 {
 public:
+	FragTrap();
 	FragTrap(const std::string& name);
 	FragTrap(const FragTrap& src);
 	~FragTrap();

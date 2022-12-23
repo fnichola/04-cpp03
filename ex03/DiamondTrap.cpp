@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.cpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:55:15 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 05:41:44 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 02:48:11 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "debugPrint.hpp"
 #include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap()
+	: ClapTrap("Diamond_clap_name"), m_name("Diamond")
+{
+	debugPrint("DiamondTrap default constructor called", BLU);
+	m_hitPoints = FragTrap::m_hitPoints;
+	m_energyPoints = ScavTrap::m_energyPoints;
+	m_attackDamage = FragTrap::m_attackDamage;
+}
 
 DiamondTrap::DiamondTrap(const std::string& name)
 	: ClapTrap(name + "_clap_name"), m_name(name)
 {
-	std::cout << "DiamondTrap constructor called" << std::endl;
+	debugPrint("DiamondTrap constructor called", BLU);
 	m_hitPoints = FragTrap::m_hitPoints;
 	m_energyPoints = ScavTrap::m_energyPoints;
 	m_attackDamage = FragTrap::m_attackDamage;
@@ -25,18 +35,18 @@ DiamondTrap::DiamondTrap(const std::string& name)
 DiamondTrap::DiamondTrap(const DiamondTrap& src)
 	: ClapTrap(src), ScavTrap(src), FragTrap(src)
 {
-	std::cout << "DiamondTrap copy constructor called" << std::endl;
+	debugPrint("DiamondTrap copy constructor called", BLU);
 	*this = src;
 }
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap destructor called" << std::endl;
+	debugPrint("DiamondTrap destructor called", BLU);
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& rhs)
 {
-	std::cout << "DiamondTrap copy assignment operator called" << std::endl;
+	debugPrint("DiamondTrap copy assignment operator called", BLU);
 	m_name = rhs.m_name;
 	m_hitPoints = rhs.m_hitPoints;
 	m_energyPoints = rhs.m_energyPoints;
@@ -56,10 +66,10 @@ void DiamondTrap::whoAmI()
 
 void DiamondTrap::printStats()
 {
-	std::cout << "------------------------------------------" << std::endl;
-	std::cout << "name: " << m_name << std::endl;
-	std::cout << "hp: " << m_hitPoints << std::endl;
-	std::cout << "energy: " << m_energyPoints << std::endl;
-	std::cout << "attack: " << m_attackDamage << std::endl;
+	std::cout << "------------------------------------------\n";
+	std::cout << "name: " << m_name << "\n";
+	std::cout << "hp: " << m_hitPoints << "\n";
+	std::cout << "energy: " << m_energyPoints << "\n";
+	std::cout << "attack: " << m_attackDamage << "\n";
 	std::cout << "------------------------------------------" << std::endl;
 }

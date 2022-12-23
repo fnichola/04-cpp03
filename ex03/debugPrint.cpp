@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   debugPrint.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/23 02:17:50 by fnichola         ###   ########.fr       */
+/*   Created: 2022/12/08 06:15:24 by fnichola          #+#    #+#             */
+/*   Updated: 2022/12/23 02:48:57 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "debugPrint.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+void debugPrint(const std::string& str, const std::string& color)
 {
-public:
-	ScavTrap();
-	ScavTrap(const std::string& name);
-	ScavTrap(const ScavTrap& src);
-	~ScavTrap();
-	ScavTrap& operator=(const ScavTrap& rhs);
-
-	void attack(const std::string& target);
-	void guardGate();
-};
-
-#endif
+	std::cout << color + str + COLOR_RESET << std::endl;
+}

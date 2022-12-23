@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 02:51:58 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 03:13:47 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/23 01:52:17 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class ClapTrap
 {
 public:
+	ClapTrap();
 	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& src);
 	~ClapTrap();

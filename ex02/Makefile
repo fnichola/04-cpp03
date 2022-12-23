@@ -6,7 +6,7 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/12/06 02:37:35 by fnichola         ###   ########.fr        #
+#    Updated: 2022/12/23 02:27:09 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp \
 	ClapTrap.cpp \
 	ScavTrap.cpp \
-	FragTrap.cpp
+	FragTrap.cpp \
+	debugPrint.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
