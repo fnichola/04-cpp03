@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/05 03:17:18 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 05:20:42 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ public:
 
 	void attack(const std::string& target);
 	void guardGate();
+
+protected:
+	std::string m_name;
+	unsigned int m_hitPoints;
+	unsigned int m_energyPoints;
+	unsigned int m_attackDamage;
 };
 
 #endif
