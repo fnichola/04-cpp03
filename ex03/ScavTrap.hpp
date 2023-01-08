@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2023/01/08 05:20:42 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:16:03 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	ScavTrap();
 	ScavTrap(const std::string& name);
 	ScavTrap(const ScavTrap& src);
-	~ScavTrap();
+	virtual ~ScavTrap();
 	ScavTrap& operator=(const ScavTrap& rhs);
 
 	void attack(const std::string& target);

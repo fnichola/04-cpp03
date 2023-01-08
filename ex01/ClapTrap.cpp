@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 02:56:57 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/23 02:16:29 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:11:01 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,13 @@ ClapTrap::~ClapTrap()
 ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
 {
 	debugPrint("ClapTrap copy assignment operator called", BLU);
-	m_name = rhs.m_name;
-	m_hitPoints = rhs.m_hitPoints;
-	m_energyPoints = rhs.m_energyPoints;
-	m_attackDamage = rhs.m_attackDamage;
+	if (this != &rhs)
+	{
+		m_name = rhs.m_name;
+		m_hitPoints = rhs.m_hitPoints;
+		m_energyPoints = rhs.m_energyPoints;
+		m_attackDamage = rhs.m_attackDamage;
+	}
 	return *this;
 }
 

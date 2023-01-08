@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:55:15 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/23 02:35:25 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:16:56 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,13 @@ ScavTrap::~ScavTrap()
 ScavTrap& ScavTrap::operator=(const ScavTrap& rhs)
 {
 	debugPrint("ScavTrap copy assignment operator called", BLU);
-	m_name = rhs.m_name;
-	m_hitPoints = rhs.m_hitPoints;
-	m_energyPoints = rhs.m_energyPoints;
-	m_attackDamage = rhs.m_attackDamage;
+	if (this != &rhs)
+	{
+		m_name = rhs.m_name;
+		m_hitPoints = rhs.m_hitPoints;
+		m_energyPoints = rhs.m_energyPoints;
+		m_attackDamage = rhs.m_attackDamage;
+	}
 	return *this;
 }
 

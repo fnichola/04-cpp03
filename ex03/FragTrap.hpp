@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:52:42 by fnichola          #+#    #+#             */
-/*   Updated: 2023/01/08 05:19:48 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:15:53 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	FragTrap();
 	FragTrap(const std::string& name);
 	FragTrap(const FragTrap& src);
-	~FragTrap();
+	virtual ~FragTrap();
 	FragTrap& operator=(const FragTrap& rhs);
 
 	void attack(const std::string& target);

@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
-/*   Updated: 2023/01/08 05:38:03 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:19:09 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
+#include "debugPrint.hpp"
 
 int main()
 {
@@ -27,9 +28,9 @@ int main()
 	d.guardGate();
 	d.whoAmI();
 
-	std::cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-	std::cout << "Copy by assignment (dd = d):\n";
-	std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
+	debugPrint("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	debugPrint("Copy by assignment (dd = d):");
+	debugPrint("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
 	DiamondTrap dd = d;
 	dd.printStats();

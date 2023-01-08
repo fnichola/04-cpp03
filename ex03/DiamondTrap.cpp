@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 03:55:15 by fnichola          #+#    #+#             */
-/*   Updated: 2023/01/08 05:24:04 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:15:41 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,13 @@ DiamondTrap::~DiamondTrap()
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& rhs)
 {
 	debugPrint("DiamondTrap copy assignment operator called", BLU);
-	m_name = rhs.m_name;
-	ClapTrap::m_hitPoints = rhs.ClapTrap::m_hitPoints;
-	ClapTrap::m_energyPoints = rhs.ClapTrap::m_energyPoints;
-	ClapTrap::m_attackDamage = rhs.ClapTrap::m_attackDamage;
+	if (this != &rhs)
+	{
+		m_name = rhs.m_name;
+		ClapTrap::m_hitPoints = rhs.ClapTrap::m_hitPoints;
+		ClapTrap::m_energyPoints = rhs.ClapTrap::m_energyPoints;
+		ClapTrap::m_attackDamage = rhs.ClapTrap::m_attackDamage;
+	}
 	return *this;
 }
 

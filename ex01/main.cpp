@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 05:38:30 by fnichola         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:09:15 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 #include <limits.h>
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "debugPrint.hpp"
 
 int main()
 {
+	{
 	ScavTrap b("Jim");
 	b.attack("Tom");
 	b.takeDamage(2);
@@ -28,6 +30,14 @@ int main()
 	b.takeDamage(UINT_MAX);
 	b.takeDamage(42);
 	b.guardGate();
+	}
+
+	debugPrint("------------------------------------------");
+
+	ClapTrap *c = new ScavTrap("John");
+
+	c->attack("Bob");
+	delete c;
 
 	return 0;
 }
